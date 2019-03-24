@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>SPA Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./server.js"></script>
+</head>
+<body>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+
+                </div>
+            </div>
+        </div>
+
+        <script id="contact-div" type="text/x-handlebars-template">
+            <div>
+                <h6>Contact Name:</h6> <span>{{name}}</span>
+                <br><br>
+                <h6>E-mail:</h6> <span>{{email}}</span>
+            </div>
+        </script>
+
+        <script id="address-template" type="text/x-handlebars-template">
+            <p>You can find me in {{city}}. My address is {{number}} {{street}}.</p>
+        </script>
+
+        <div class="content-placeholder"></div>
+
+        <script>
+            $(function () {
+                // Grab the template script
+                var theTemplateScript = $("#address-template").html();
+
+                // Compile the template
+                var theTemplate = Handlebars.compile(theTemplateScript);
+
+                // Define our data object
+                var context={
+                    "city": "London",
+                    "street": "Baker Street",
+                    "number": "221B"
+                };
+
+                // Pass our data to the template
+                var theCompiledHtml = theTemplate(context);
+
+                // Add the compiled html to the page
+                $('.content-placeholder').html(theCompiledHtml);
+                });
+        </script>
+            
+              <!-- JS Library Dependencies -->
+              <script src="scripts/jquery/dist/jquery.min.js"></script>
+              <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+              <script src="scripts/axios/dist/axios.min.js"></script>
+              <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
+              <script src="scripts/vanilla-router/dist/vanilla-router.min.js"></script>
+              <script src="js/app.js"></script>
+    
+</body>
+</html>
