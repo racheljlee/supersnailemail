@@ -5,7 +5,7 @@ var path = require('path');
 var exphbs = require('express-handlebars');
 
 var app = express();
-var port = process.env.PORT || 3000;
+var PORT = process.env.PORT || 3000;
 
 app.use(express.static(path.join(__dirname, '/public')));
 
@@ -61,5 +61,6 @@ request(options, function (error, response, data) {
             
 });
 
-app.listen(port);
-console.log('ActiveCampign app server is running on port ' + port);
+app.listen(PORT, function() {
+    console.log('Super Snail eMail server is running on PORT ' + PORT);
+});
