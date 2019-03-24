@@ -1,0 +1,29 @@
+{
+  "name": "activecampaign_contacts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "activecampaign": "^1.2.5",
+    "axios": "^0.18.0",
+    "dotenv": "^7.0.0",
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.2",
+    "handlebars": "^4.1.1",
+    "jquery": "^3.3.1",
+    "mongoose": "^5.4.19",
+    "path": "^0.12.7",
+    "request": "^2.88.0",
+    "vanilla-router": "^1.2.7"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10"
+  }
+}

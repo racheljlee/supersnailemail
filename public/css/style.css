@@ -1,0 +1,113 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600);
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400);
+
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background: url('../img/dark-honeycomb.png') repeat fixed;
+    font-family: 'Montserrat', sans-serif!important;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+h1 {
+    color: #eee;
+}
+
+.app-icon {
+    width: 80%;
+    margin: 0 auto;
+}
+
+#app-header {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.app-icon img {
+    width: 100px;
+}
+
+#snail-icon {
+    padding-top: 50px;
+}
+
+#snail-icon img {
+    position: relative;
+    animation: backandforth 10s;
+    animation-iteration-count: infinite;
+    -webkit-animation: backandforth 10s; /* Safari and Chrome */
+    -webkit-animation-iteration-count: infinite;
+    transition: transform .1s;
+}
+
+@keyframes backandforth {
+    0% {left: 0px; transform: rotateY(0deg)}
+    10% {left: 178px; transform: rotateY(0deg)}
+    20% {left: 356px; transform: rotateY(0deg)}
+    30% {left: 534px; transform: rotateY(0deg)}
+    40% {left: 712px; transform: rotateY(0deg)}
+    50% {left: 890px; transform: rotateY(0deg);}
+    60% {left: 712px; transform: rotateY(180deg);}
+    70% {left: 534px; transform: rotateY(180deg);}
+    80% {left: 356px; transform: rotateY(180deg);}
+    90% {left: 178px; transform: rotateY(180deg);}
+    100% {left: 0px; transform: rotateY(180deg);}
+}
+@-webkit-keyframes backandforth {
+    0% {left: 0px; transform: rotateY(0deg)}
+    10% {left: 178px; transform: rotateY(0deg)}
+    20% {left: 356px; transform: rotateY(0deg)}
+    30% {left: 534px; transform: rotateY(0deg)}
+    40% {left: 712px; transform: rotateY(0deg)}
+    50% {left: 890px; transform: rotateY(0deg);}
+    60% {left: 712px; transform: rotateY(180deg);}
+    70% {left: 534px; transform: rotateY(180deg);}
+    80% {left: 356px; transform: rotateY(180deg);}
+    90% {left: 178px; transform: rotateY(180deg);}
+    100% {left: 0px; transform: rotateY(180deg);}
+}
+
+#app-header {
+    padding: 30px 0 30px 0;
+    text-align: center;
+    letter-spacing: 1px;
+}
+.contacts-container {
+    background: #1e1e1e;
+    color: #eee;
+    border: 1px #333 solid;
+    border-radius: 5px;
+    padding: 50px;
+    height: 400px;
+    width: 80%;
+    overflow-y: scroll;
+    margin: 0 auto;
+}
+.contact-div {
+    background: #191919;
+    padding: 30px 0 10px 30px;
+    margin-bottom: 10px;
+}
+.contact-div:hover {
+    background: #111;
+}
+
+.span-style {
+    font-weight: 600;
+}
+.span-content {
+    font-weight: 300;
+}
+.name {
+    color: #C7CCEF;
+}
+.email {
+    color: #FF7394;
+    cursor: pointer;
+}
