@@ -11,6 +11,11 @@ app.set("view engine", "handlebars");
 var request = require('request');
 var path = require('path');
 
+var bodyParser = require("body-parser");
+
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
 require("dotenv").config();
 
 var apiKey = process.env.API_KEY;
