@@ -39,9 +39,9 @@ h1 {
 
 #snail-icon img {
     position: relative;
-    animation: backandforth 10s;
+    animation: backandforth 60s;
     animation-iteration-count: infinite;
-    -webkit-animation: backandforth 10s; /* Safari and Chrome */
+    -webkit-animation: backandforth 60s; /* Safari and Chrome */
     -webkit-animation-iteration-count: infinite;
     transition: transform .1s;
 }
