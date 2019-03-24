@@ -1,20 +1,19 @@
 var express = require('express');
-
-var app = express();
-var port = 8080;
-
-var exphbs = require('express-handlebars');
-
-app.engine("handlebars", exphbs({ defaultLayout: "main" }));
-app.set("view engine", "handlebars");
-
+var bodyParser = require("body-parser");
 var request = require('request');
 var path = require('path');
+var exphbs = require('express-handlebars');
 
-var bodyParser = require("body-parser");
+var app = express();
+var port = process.env.PORT || 3000;
+
+app.use(express.static(path.join(__dirname, '/public')));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.set("view engine", "handlebars");
 
 require("dotenv").config();
 
@@ -41,8 +40,8 @@ request(options, function (error, response, data) {
         var contactName = currentContact.firstName + " " + currentContact.lastName;
         var contactEmail = currentContact.email;
 
-        console.log("Name: " + contactName);
-        console.log("E-mail: " + contactEmail);
+        //console.log("Name: " + contactName);
+        //console.log("E-mail: " + contactEmail);
         console.log("====================================");
 
         // Stuff contactObject into contactInfo array
@@ -61,9 +60,6 @@ request(options, function (error, response, data) {
     };
             
 });
-
-app.use(express.static(path.join(__dirname, '/public')));
-
 
 app.listen(port);
 console.log('ActiveCampign app server is running on port ' + port);
